@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiralmodel</title>
+</head>
+<style>
+    table, th, td {
+      border: 1px solid black;
+      border-radius: 10px;
+    }
+</style>
+<body style="background-color:powderblue;">
+
+        <h1>Inkrementaalne arendusmudel</h1>
+    </br>
+        <p1>Tarkvaraarenduses on muutustega toimetulek hädavajalik, kuna suured projektid nõuavad paindlikkust seoses pidevalt muutuvate nõuete, tehnoloogia ja platvormidega. 
+            Muutuste mõju ja maksumust saab vähendada, rakendades meetodeid, mis võimaldavad võimalikult varakult muudatusi hinnata, näiteks prototüüpimise abil. 
+            Seetõttu on praktiline lähenemine inkrementaalne arendus ja osaline üleandmine, mis lubab muudatusi teha enne, kui arendustöö konkreetse osa kallale asutakse.
+        </p1>
+    </br>
+        -------------------------------------------------
+        <h2>Mõistelist segadust tekitavad iteratiivne ja inkrementaalne arendus. Alistair Cockburni järgi on tegemist kahe erineva arendusmudeliga:</h2>
+        <li>Inkrementaalne arendus on etapiviisiline ja ajagraafikut järgiv strateegia, 
+            kus süsteemi erinevaid osi arendatakse erinevatel aegadel ja erineva kiirusega ning kui üks osa valmis saab, 
+            integreeritakse see juba valmis süsteemiga.</li>
+        <li>*Alternatiivne strateegia oleks kodeerida kõik süsteemi osad ja siis kogu kood integreerida ühekorraga.*</li>
+        <li>Iteratiivne arendus on nö muutmisstrateegia, kus nähakse ette olemasolevate süsteemi osade ümbertegemine ja parandamine.</li>
+        <li>*Alternatiivne strateegia oleks planeerida tegevused selliselt, et kõik tehtaks õigesti esimesel katsel.*</li>
+    </br>
+        <p1>Ian Sommerville järgi on iteratiivne arendusmudel pigem üldine nimetus mitmele nn hübriidmudelile (sh inkrementaal- ja spiraalmudel). 
+        Sõna "iteratiivne" rõhutab seda, et tegevused selles mudelis korduvad.
+        </p1>
+    </br>
+        <p1>Sõltumata tähendusest, mis pannakse iteratiivse arenduse taha, on inkrementaalne arendus erinevates allikates üsna üheselt kirjeldatud.</p1>
+    </br>
+        <p1>Inkrementaalne arendus võib olla nii plaanipärane kui ka paindlik. 
+            Mudel näeb ette ehitada valmis algul väike osa süsteemist ning seda järgnevalt mitmes etapis laiendada. 
+            Inkrementaalne lähenemine võimaldab arendajatel ja ka tulevastel süsteemi kasutajatel varajastest iteratsioonidest õppida, 
+            saada tagasisidet veel siis kui on võimalik teha muudatusi nt süsteemi arhitektuuri kirjutamata kogu koodi ümber.
+        </p1>
+    </br>
+    </br>
+    </br>
+        <img src="inkrementaalne.jpeg" alt="Pilt Inkrementaal mudelist">
+    </br>
+        <p1>Joonis 1-1. Inkrementaalne arendus</p1>
+    </br>
+    </br>
+    </br>
+        <p1>Tarkvara spetsifikatsioon, projekt ja teostus jaotatakse osadeks (increment), mida asutakse ükshaaval arendama. 
+            Sel viisil väheneb ümbertegemist vajavate süsteemi osade hulk ja kliendid saavad võimaluse oma soove pikema aja vältel ringi mõelda. 
+            Tüüpiliseks tuleks pidada veel seda, et valminud süsteemi osad on kasutatavad ning see aitab kliendil oma edasistes soovides paremat selgust saada.
+        </p1>
+    </br>
+        <p1>Tegevuste käik on järgmine: kõigepealt määratakse nõuded üldisemal kujul ning nad jaotatakse tähtsamateks ja vähemtähtsateks. 
+            Järgnevalt määratakse tarneosad - mitme tarnena ja millest koosnevana klient oma tarkvara saama hakkab. 
+            Tarne all mõeldakse süsteemi osa ehk inkrementi. Iga tarne peab lisama süsteemile kindla funktsionaalsuse. 
+            Sealjuures tootmist alustatakse kõrgema prioriteediga osadest. Kui süsteemi osad on määratud, võetakse ette 1. osa ja hakatakse seda detailiseerima,
+             kasutades selleks sobivaimat protsessi (ja miks ka mitte koskmudelit). 
+             Samaaegselt saab täpsustada teiste osade nõudeid, kuid töös oleva osa nõuded on külmutatud. 
+             Kui väga vaja, pöördutakse selle osa juurde tagasi hiljem. Kui osa saab valmis, tarnitakse see kliendile, 
+             kes saab selle töösse rakendada (või vähemalt seda tõsiselt katsetada). See aitab kliendil täpsustada nõudeid järgmiste osade jaoks 
+             (või sama osa hilisemate versioonide tarvis). Seejärel võetakse käsile järgmine osa. Uued osad liidestatakse olemasoleva süsteemiga. 
+             Kõiki osi ei pea arendama sama protsessi kasutades.
+        </p1>
+    </br>
+    </br>
+    </br>
+        <p1>Inkrementaalse arenduse head ja vead:</p1>
+       
+        <table style="width:50%">
+            <tr>
+                <th>Head</th>
+                <th>Vead</th>
+            </tr>
+            <tr>
+                <td>Kulutused, mida tehakse kasutaja nõuete muutumise tõttu, vähenevad, uuesti tehtava analüüsi ja dokumentatsiooni hulk väheneb oluliselt võrreldes koskmudeliga.</td>
+                <td>Progress ei ole hästi jälgitav - haldurid vajavad pidevalt materjale progressi mõõtmiseks. Kiire arenduse korral ei ole tasuv tekitada dokumente iga pisikese versioonimuudatuse jaoks.</td>
+            </tr>
+            <tr>
+                <td>Kergem on saada kliendi tagasisidet juba tehtud arendustööle - kliendid saavad anda kommentaare valminud osadele ja ka näevad, kui palju on tehtud. Sel viisil on esimesed süsteemi osad nagu prototüübid kogu süsteemile.</td>
+                <td>Süsteemi struktuur kipub halvenema uute osade lisandumisel - pidev muutmine rikub süsteemi struktuuri. Selle vältimiseks ja tarkvara kvaliteedi parandamiseks on vaja kulutada lisaks aega ja raha refaktoreerimisele. Halb struktuur muudab tarkvara hilisema muutmise keerulisemaks ja kulukamaks.</td>
+            </tr>
+            <tr>
+                <td>Kliendile on võimalik kiiremini tarnida ja evitada loodavat tarkvara - kliendid võivad saada süsteemist reaalset kasu varem, kui see oleks võimalik koskmudeliga.</td>
+                <td></td>
+            </tr>
+        </table>
+    </br>
+        <h2>Agiilsed arendusmeetodid</h2>
+    </br>
+        <p1>Agiilsete arendusmeetodite jaoks sobib kasutada inkrementaaset mudelit. Agiilse tarkvaraarenduse levimise algus läheb 2001 aastasse, kui senise üliplaanipärase arenduse vastased kirjutasid alla "The Agile Manifesto"-le, mille kõige olulisemates punktides rõhutakse inimesele ja inimeste vahelisele suhtlemisele.</p1>
+        <li>Inimesed ja suhtlemine on tähtsamad kui protsessid ja tööriistad.</li>
+        <li>Töötav tarkvara on tähtsam kui dokumentatsioon.</li>
+        <li>Koostöö kliendiga on tähtsam kui läbirääkimised lepingu üle.</li>
+        <li>Muudatussoovidele vastutulek on tähtsam kui plaani järgmine.</li>
+    </br>
+        <p1>Enam arvestatakse tagasiside (koormustestimine, kasutajate arvamus jm) käigus saadud infoga kui loodetakse hoolika etteplaneerimise tehnikale. 
+            Põhitähelepanu on inimestel, sh kasutajatel, ja pideval testimisel. Öeldakse, et agiilmeetoditega saavutatakse parem tulemus sama raha eest, 
+            aga agiilmeetoditega on raskem ette planeerida, millal tarkvara mingi funktsioon valmis saab - 
+            „Agile process will provide the most bang for the buck, but won't say exactly when that bang will be".
+        </p1>
+        <p1>Tuntumad ja levinumad agiilsed arendusmeetodid on ekstreemprogrammeerimine (XP), Scrum, Feature Driven Development (FDD), Open Unified Process (OpenUP) jt</p1>
+    </br>
+    </br>
+        <h2>Ekstreemprogrammeerimine ehk XP</h2>
+        <p1>XP on tuntumaid agiilmeetoodeid. 
+            XP-s viiakse sammud läbi äärmuslikult (ekstreemselt - siit meetodi nimetus) lühikestena, 
+            võrreldes klassikaliste arendusmudelitega - esimene sammude läbimistsükkel võib olla päevad või nädal pikk, samas kui klassikalistes mudelites kestab see kuid ja aastaid. 
+            Enne kodeerimist kirjutatakse automatiseeritud testid, mida tarkvara peab läbima, seejärel programmeeritakse paarides 
+            (so kaks programmeerijat ühe arvuti taga kodeerivad ühte programmilõiku - nn "paarisprogrammeerimine"). 
+            Kui valminud kood läbib testid, on programmeerimise samm antud iteratsioonis lõpetatud.
+        </p1>
+    </br>
+    </br>
+    <td colspan="4"> <a href="https://eopearhiiv.edu.ee/e-kursused/eucip/arendus/1222_inkrementaalne_arendusmudel.html">Kasutatud Materjal</a></td>
+
+
+</body>
+</html>

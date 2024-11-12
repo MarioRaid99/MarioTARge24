@@ -1,18 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+ <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spiralmodel</title>
 </head>
+<style>
+    table, th, td {
+      border: 1px solid black;
+      border-radius: 10px;
+    }
+</style>
 <body style="background-color:powderblue;">
 
     <h1>Spiralmodel Arendusmudel</h1>
 </br>
     <p1>Spiraalmudeli töötas esimesena välja Barry Boehm oma 1986. aasta artiklis. Mudeli olemust kujutab spiraali kujund, kus iga kordus esindab protsessi etappi. 
         Esimeses korduses võib keskenduda näiteks süsteemi teostatavuse hindamisele, järgmises nõuete täpsustamisele, sellele järgneb kavandamine jne.</p1>
+</br>
+-----------------------------------------------------------
+<h1>Spiraalmudeli etapid</h1>
+</br>
+    <h2>1. Eesmärkide seadmine (Objective setting)</h2>
+      <li>Määratakse selle faasi ehk korduse eesmärgid, piirangud protsessis, tulemused, juhtimisplaan, 
+        võimalikud riskid ning alternatiivsed strateegiad lähtudes riskidest.
+      </li>
+    <h2>2. Riskide hindamine ja maandamine (Risk assessment and reduction)</h2>
+     <li>Iga leitud riski jaoks tehakse analüüs, võetakse midagi ette riskide maandamiseks (nt risk, et nõudmised pole adekvaatsed: tehakse prototüüp)</li>
+</br>
+    <h2>3. Arendus ja valideerimine (Development and validation)</h2>
+    <li>Valitakse arendusmudel, mis lähtub hinnatud riskidest (mudel peab olema selline, mis riske vähendada aitab). 
+        Nt kui kasutajaliides on suurim risk, siis võib aidata prototüüpide tegemine.</li>
+</br>
+    <h2>4. Planeerimine (Planning)</h2>
+    <li>Projekt vaadatakse üle ja tehakse otsus, kas jätkata järgmisel kordusel, kui otsustatakse jätkata, tehakse järgmise faasi jaoks plaan.</li>
+</br>
+-----------------------------------------------------------
+<h2> Pilt Waterfall mudelist</h2>
+    <img src="Spiraalmudel.png" alt="Pilt Spiraalmudelist">
+</br> 
 
-
+<table style="width:50%">
+    <tr>
+        <th>Head</th>
+        <th>Vead</th>
+    </tr>
+    <tr>
+        <td>Suures koguses riski analüüs</td>
+        <td>Hiline testimisperiood</td>
+    </tr>
+    <tr>
+        <td>Sobib suurte ja "mission critical" projektide jaoks</td>
+        <td>Võib olla kulukas mudel</td>
+    </tr>
+    <tr>
+        <td>Kliendi rahulolu ja dokumentatsiooni kontorll</td>
+        <td>Riksi analüüs vajab väga head eksperti</td>
+    </tr>
+    <tr>
+        <td>Lõpp tootele saab funktsioone ja funktsionaalsust hiljem lisada</td>
+        <td>Projekti edukus sõltub riski analüüsist</td>
+    </tr>
+    <tr>
+        <td>Tarkvara toodetakse elutsükli alguses</td>
+        <td>Ei toimi hästi väikeste projektide puhul</td>
+    </tr>
+</table>
+</br>
+    <td colspan="4"> <a href="https://eopearhiiv.edu.ee/e-kursused/eucip/arendus/1223_spiraalmudel.html">Kasutatud Materjal 1</a></td>
+</br>
+    <td colspan="4"> <a href="https://prezi.com/ixl0ks0rpn8t/tarkvaraarenduse-mudelid/">Kasutatud Materjal 2</a></td>
     
 </body>
 </html>
