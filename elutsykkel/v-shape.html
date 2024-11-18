@@ -13,4 +13,64 @@
     }
 </style>
 <body style="background-color:powderblue;">
-    
+    <h1>V-mudel arendusmudel</h1>
+-------------------------------------------------
+    <p>V-mudel on SDLC mudel, kus protsesside täitmine toimub järjestikuses V-kujulises järjekorras. Seda tuntakse ka kui <b>Verifikatsiooni ja Validatsiooni mudelit</b>.</p>
+  </br>
+    <p>V-mudel on kosk mudeli laiendus ja see põhineb testimisfaasi seondumisel iga vastava arendusetapiga. 
+      See tähendab, et igal arendustsükli faasil on otseselt seotud testimisfaas. 
+      See on väga distsiplineeritud mudel ja järgmine etapp algab alles pärast eelmise etapi lõpetamist.
+    </p>
+    <p>V-mudeli järgi plaanitakse arendusfaasi vastav testimisfaas paralleelselt. 
+      Nii on 'V' ühel küljel Verifikatsiooni faasid ja teisel küljel Validatsiooni faasid. 
+      Koodimise faas ühendab V-mudeli kaks külge.
+    </p>
+  </br>
+  <img src="Vmudel.jpg" alt="Pilt V-mudelist">
+  </br>
+-------------------------------------------------
+</br>
+
+<h2>V-Mudeli - plussid ja miinused</h2> 
+<p>V-mudeli meetodi eeliseks on see, et see on väga lihtne mõista ja rakendada. Selle mudeli lihtsus muudab ka haldamise lihtsamaks. 
+  Puuduseks on, et mudel ei ole muudatuste suhtes paindlik ja juhul, kui tekib nõudmiste muutus, mis on tänapäeva dünaamilises maailmas väga tavaline, 
+  muutub muudatuse tegemine väga kalliks.
+</p>
+
+
+<table style="width:50%">
+  <tr>
+      <th>Head</th>
+      <th>Vead</th>
+  </tr>
+  <tr>
+      <td>See on väga distsiplineeritud mudel ja faasid lõpetatakse üks korraga.</td>
+      <td>Kõrge risk ja ebakindlus.</td>
+  </tr>
+  <tr>
+      <td>Toimib hästi väiksemate projektide puhul, kus nõudmised on väga hästi mõistetavad.</td>
+      <td>Ei ole hea mudel keerukate ja objektorienteeritud projektide jaoks.</td>
+  </tr>
+  <tr>
+      <td>Lihtne ja arusaadav ning lihtne kasutada.</td>
+      <td>Halb mudel pikaajaliste ja pidevate projektide jaoks.</td>
+  </tr>
+  <tr>
+      <td>Lihtne hallata mudeli jäikuse tõttu. Igal faasil on spetsiifilised tulemused ja ülevaatusprotsess.</td>
+      <td>Ei sobi projektidele, kus nõudmised on mõõdukas või kõrges muutumisriski all.</td>
+  </tr>
+  <tr>
+      <td></td>
+      <td>Kui rakendus on testimise etapis, on raske tagasi minna ja muuta funktsionaalsust.</td>
+  </tr>
+  <tr>
+      <td></td>
+      <td>Kuni elutsükli hiliste etappideni ei toodeta töötavat tarkvara.</td>
+  </tr>
+</table>
+
+<td colspan="4"> <a href="https://www.tutorialspoint.com/sdlc/sdlc_v_model.htm">Kasutatud Materjal</a></td>
+
+</body>
+</html>
+
