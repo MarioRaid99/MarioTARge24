@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Kalkulaator</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* navbar asjad */
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* pea lehe kontent */
+        .container {
+            display: flex;
+            margin: 20px;
+        }
+
+        /* teksti sektsioon */
+        .text-section {
+            flex: 2;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+        }
+
+        /* pildi stuff */
+        .image-section {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            width: 100%;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="/index.html">Pealeht</a>
+
+    </div>
+
+    <!-- põhi stuff -->
+    <div class="container">
+        <!-- teksti sektsioon -->
+        <div class="text-section">
+            <h2>Bitcoin kalkulaator</h2>
+            <p>Bitcoin on krüptoraha või digitaalvaluuta ja ülemaailmne maksete süsteem.</p>
+            <p>Huvitavad faktid:</p>
+            <ul>
+                <li>Bitcoini looja Satoshi Nakamoto päris idenditeet on teadmata</li>
+                <li>Bitcoin oli esimene digivaluuta</li>
+                <li>Detsentraliseeritud digitaalvaluuta ehk iseseisev rahasüsteem, mis töötab ilma keskse hoidla (näiteks keskpank) ja administratsioonita.</li>
+            </ul>
+        </br>
+            <p>Kõik bitcoini tehingud toimuvad kasutajalt-kasutajale, ilma vahendajateta. Kõik tehingud kontrollitakse ja kinnitatakse 
+                automaatselt võrgusõlmede poolt ja need tehingud registreeritakse avalikult kättesaadavas andmebaasis, mida kutsutatakse bitcoini blokiahelaks.
+            </p>
+            <p>Hetkel on ringluses üle 16 miljoni bitcoini ja maksimaalne bitcoinide arv, mis saab üldse ringluses olla on 21 miljonit. 
+                Bitcoine tekib juurde kaevandamise teel, kus kasutatakse arvutijõudlust leidmaks uusi bitcoinide blokiahelaid. 
+                Selle leidmisel antakse kasutajale bitcoin, aga iga järgneva bitcoini leidmine on keerulisem ja töömahukam, mis nõuab rohkem aega või 
+                protsessi kiirendamiseks läheb vaja võimsamat arvutusjõudu.
+            </p>
+            <p>Bitcoini leiutas keegi Satoshi Nakamoto, kelle isik on tänaseni teadmata ja keegi ei tea, kes asub tundmatu Satoshi Nakamoto nime taga. 
+                Küll aga Nakamoto kontodel on üle 1 miljoni
+            </p>
+        </br>
+            <h2>Kuidas töötab Bitcoin kalkulaator?</h2>
+            <h3>Kalkulaatori funktsioonid</h3>
+            <ul>
+                <li>Bitcoini väärtuse arvutamine erinevates valuutades (EUR, USD, GBP, EEK).</li>
+                <li>Reaalajas andmete hankimine Coindesk API kaudu.</li>
+                <li>Tulemuste kuvamine valitud valuuta tähisega (nt "500 EUR").</li>
+            </ul>
+
+            <h3>Tehniline Kirjeldus</h3>
+            <p>Kalkulaator kasutab Coindesk API-d, et hankida reaalajas valuutakursid. Kursi teisendused tehakse järgmiste valemite alusel:</p>
+            <ul>
+                <li><strong>EUR:</strong> Bitcoini kogus korrutatakse EUR kursiga.</li>
+                <li><strong>USD:</strong> Bitcoini kogus korrutatakse USD kursiga.</li>
+                <li><strong>GBP:</strong> Bitcoini väärtus teisendatakse USD kaudu GBP-ks.</li>
+                <li><strong>EEK:</strong> Bitcoini väärtus teisendatakse EUR kaudu EEK-ks (1 EUR = 15.6466 EEK).</li>
+            </ul>
+            <p>Lisaks toetab kalkulaator kasutajasõbralikku liidest, mis võimaldab kiiresti arvutusi teha ja tulemusi vaadata.</p>
+            <h2>Tarkvaranõuded</h2>
+
+            <h3>1. Funktsionaalsed nõuded</h3>
+            <ul>
+                <li>Kalkulaator peab võimaldama kasutajal sisestada Bitcoini koguse.</li>
+                <li>Kasutaja peab saama valida valuuta, millesse konverteerida:
+                    <ul>
+                        <li>EUR (Euro)</li>
+                        <li>USD (USA Dollar)</li>
+                        <li>GBP (Suurbritannia Nael)</li>
+                        <li>EEK (Eesti Kroon)</li>
+                    </ul>
+                </li>
+                <li>Tarkvara peab hankima reaalajas valuutakursid Coindesk API-st.</li>
+                <li>Kui Coindesk API ei paku GBP kurssi, peab tarkvara arvutama GBP kursi USD alusel ligikaudse väärtusega.</li>
+                <li>Eesti Krooni (EEK) arvutamine peab toimuma fikseeritud kursiga: 1 EUR = 15.6466 EEK.</li>
+                <li>Kalkulaator peab kuvama tulemuse korrektselt koos vastava valuuta sümboli või nimega.</li>
+                <li>Kui sisend on vigane (nt mitte-numbriline või negatiivne), peab tarkvara kuvama sobiva veateate.</li>
+            </ul>
+    
+            <h3>2. Mittefunktsionaalsed nõuded</h3>
+            <ul>
+                <li>Tarkvara peab olema kasutajasõbralik, puhta ja intuitiivse kasutajaliidesega.</li>
+                <li>Kalkulaator peab kiiresti reageerima kasutaja sisenditele ja API-päringutele.</li>
+                <li>Tarkvara peab oskama käsitleda võrguvigu API-st andmete hankimisel.</li>
+                <li>Kood peab olema modulaarne ja kergesti laiendatav, et toetada lisavaluutasid või uusi API-sid tulevikus.</li>
+            </ul>
+    
+            <h3>3. Tarkvarakeskkonna nõuded</h3>
+            <ul>
+                <li>Tarkvara töötab Windowsi platvormidel.</li>
+                <li>Arendustööriistad: Visual Studio koos C# ja .NET Frameworkiga.</li>
+                <li>Reaalajas kursi hankimiseks on vajalik internetiühendus.</li>
+                <li>Välised sõltuvused:
+                    <ul>
+                        <li>Newtonsoft.Json JSON andmete parsimiseks API-st.</li>
+                    </ul>
+                </li>
+            </ul>
+    
+            <h3>4. Kasutajaliidese nõuded</h3>
+            <ul>
+                <li>Kasutajaliides peab sisaldama:
+                    <ul>
+                        <li>Tekstivälja Bitcoini koguse sisestamiseks.</li>
+                        <li>Rippmenüüd valuuta valimiseks.</li>
+                        <li>Nuppu arvutuse käivitamiseks.</li>
+                    </ul>
+                </li>
+                <li>Tulemus peab olema nähtaval kujul ekraanil, näidates konverteeritud väärtust ja valitud valuutat.</li>
+                <li>Vead peavad olema esitatud kasutajasõbralikus vormis, näiteks veateade või märkus ekraanil.</li>
+            </ul>
+    
+            <h3>5. Piirangud</h3>
+            <ul>
+                <li>Praegu toetab kalkulaator ainult nelja valuutat: EUR, USD, GBP ja EEK.</li>
+                <li>Kui API pole saadaval, ei ole võimalik reaalajas konverteerimist läbi viia, ning kasutajale kuvatakse veateade.</li>
+                <li>Eesti Kroon (EEK) arvutatakse ainult fikseeritud kursiga, mitte reaalajas andmete põhjal.</li>
+            </ul>
+        </section>
+        </div>
+
+        <!-- pildi sektsion -->
+        <div class="image-section">
+            <h2>Bitcoin kalkulaator vooskeem</h2>
+            <p>Siin on välja toodud kuidas töötab bitcoin kalkulaator</p>
+            <p>Flowchart:</p>
+            <img src="bitcoinkalkulaatorskeem.png" alt="skeem">
+        </div>
+    </div>
+
+</body>
+</html>
