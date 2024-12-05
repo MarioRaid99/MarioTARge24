@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UML Diagrammid</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* navbar asjad */
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* pea lehe kontent */
+        .container {
+            display: flex;
+            margin: 20px;
+        }
+
+        /* teksti sektsioon */
+        .text-section {
+            flex: 2;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+        }
+
+        /* pildi stuff */
+        .image-section {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        
+        .button-link {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 10px auto;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button-link:hover {
+            background-color: #333;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="/index.html">Pealeht</a>
+        <a href="/elutsykkel/casevahendid/main.html">Casevahendid</a>
+        <a href="">TBH</a>
+        <a href="">TBH</a>
+    </div>
+
+    <!-- põhi stuff -->
+    <div class="container">
+        <!-- teksti sektsioon -->
+        <div class="text-section">
+            <h2>UML Diagrammid</h2>
+            <p>UML diagrammid tähistab Ühtne modelleerimiskeel. See on standard, mida kasutatakse peamiselt objektorienteeritud sisuliste 
+                dokumentatsioonimudelite loomiseks mis tahes reaalses maailmas eksisteeriva tarkvarasüsteemi jaoks.
+            </p>
+            <p>Huvitavad faktid:</p>
+            <ul>
+                <li>UML loodi 1990. aastate keskel Grady Boochi, James Rumbaugh' ja Ivar Jacobsoni poolt, 
+                    keda tuntakse ka kui tarkvaratehnika "Kolme Amigosid." 
+                    See standardiseeriti 1997. aastal objekti haldamise grupi (OMG) poolt.
+                </li>
+                <li>UML ei ole programmeerimiskeel, vaid graafiline modelleerimiskeel. 
+                    See aitab arendajatel visualiseerida ja kavandada tarkvarasüsteemi arhitektuuri, 
+                    muutes keerulised projektid lihtsamini hallatavaks.
+                </li>
+                <li>UML on universaalne ja kasutatakse laialdaselt mitmesugustes domeenides, sealhulgas tarkvaratehnika, ärianalüüs ja isegi mängude arendamine.
+
+                </li>
+            </ul>
+        </br>
+            <p>UML on suurepärane viis professionaalse dokumentatsiooni loomiseks, mis on iga projekti arendamise vajalik osa. </p>
+            <p>UML on süsteemide objektorienteeritud disaini loomise oluline osa. See pakub teile vahendeid võimsate mudelite ja kujunduste 
+                loomiseks ratsionaalsete süsteemide jaoks, mida saab ilma suuremate raskusteta mõista.
+            </p>
+
+        </br>
+        <h2>Miks kasutada UML-i?</h2>
+        <p>UML võimaldab paremat suhtlust meeskonnaliikmete vahel, annab visuaalse ülevaate keerulistest süsteemidest ning lihtsustab arendusprotsessi ja vigade leidmist. UML koosneb erinevatest diagrammidest, mis on jagatud kolme põhirühma: käitumisdiagrammid, interaktsioonidiagrammid ja struktuuridiagrammid.</p>
+        <h2>UML diagrammid</h2>
+        <ul>
+            <li>Klassidiagramm (Class Diagram)</li>
+            <li>Komponentide diagramm (Component Diagram)</li>
+            <li>Järjestusskeem (Sequence Diagram)</li>
+            <li>Kasutusjuhtumi diagramm (Use Case Diagram)</li>
+            <li>Tegevusskeem (Activity Diagram)</li>
+            <li>Oleku diagramm (State Diagram)</li>
+        </ul>
+
+        <h2>Kasulikud lingid</h2>
+        <a href="https://en.wikipedia.org/wiki/Unified_Modeling_Language" class="button-link">Wikipedia</a>
+
+        
+        </div>
+        <!-- pildi sektsion -->
+        <div class="image-section">
+            <h2>UML diagramm </h2>
+            <p></p>
+            <p>UML Diagrammi näide:</p>
+            <img src="uml_diagrams.png" alt="uml diagram">
+        </div>
+
+    </div>
+
+</body>
+</html>
