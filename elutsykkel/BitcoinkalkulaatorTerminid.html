@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Kalkulaator</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* navbar asjad */
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* pea lehe kontent */
+        .container {
+            display: flex;
+            margin: 20px;
+        }
+
+        /* teksti sektsioon */
+        .text-section {
+            flex: 2;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+        }
+
+        /* pildi stuff */
+        .image-section {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            width: 100%;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/index.html">Pealeht</a>
+        <a href="/elutsykkel/bitcoinkalkulaator.html"> Bitcoin kalkulaator pealeht</a>
+        <a href="/elutsykkel/BitcoinkalkulaatorNouded.html"> Bitcoin kalkulaatori nõuded</a>
+
+    </div>
+
+
+    <div class="container">
+        
+        <div class="text-section">
+        <h1>Bitcoini Kalkulaatori Terminid</h1>
+        <h2>Seletused ja Näited</h2>
+
+        <h3>1.`switch` lause</span></h3>
+        <p>`switch` lauset kasutatakse selleks, et valida tegevus erinevate väärtuste alusel. Seda kasutatakse tihti siis, kui on vaja käsitleda mitmeid erinevaid tingimusi.</p>
+        <p>See on kasulik mitme erineva tingimuse käsitlemiseks ilma liigsete `if`-lausete kasutamiseta.</p>
+        <p><strong>Näide:</strong></p>
+        <pre>
+switch (valuuta) {
+    case "EUR":
+        result = bitcoinAmount * euroKurs;
+        break;
+
+    case "USD":
+        result = bitcoinAmount * dollarKurs;
+        break;
+
+    default:
+        resultLabel.Text = "Vali valuuta!";
+        break;
+}
+        </pre>
+
+        <h3>2.API</span></h3>
+        <p>API Application Programming Interface on süsteem, mis võimaldab tarkvaral suhelda teiste tarkvaradega. Selles projektis kasutatakse Coindesk API-d, et saada reaalajas Bitcoini kursse.</p>
+        <p><strong>Näide API päringust:</strong></p>
+        <pre>
+string url = "https://api.coindesk.com/v1/bpi/currentprice.json";
+HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+request.Method = "GET";
+
+var webResponse = request.GetResponse();
+var webStream = webResponse.GetResponseStream();
+        </pre>
+
+        <h3>3.Klassid</span></h3>
+        <p>Klassid on objekt-orienteeritud programmeerimise põhielemendid. Need kirjeldavad, kuidas objektid käituvad ja milliseid omadusi need sisaldavad.</p>
+        <p>Klassid aitavad koodi struktureerida ja lihtsustavad objektide loomist ja haldamist.</p>
+        <p><strong>Klassi näide:</strong></p>
+        <pre>
+public class BitcoinRates {
+    public Bpi Bpi { get; set; }
+}
+
+public class Bpi {
+    public Currency USD { get; set; }
+    public Currency EUR { get; set; }
+    public Currency GBP { get; set; }
+}
+
+public class Currency {
+    public string code { get; set; }
+    public double rate_float { get; set; }
+}
+        </pre>
+
+        <h3>4.`null` kontroll</span></h3>
+        <p>Enne objektide või omaduste kasutamist on oluline kontrollida, kas need on, et vältida vigu.</p>
+        <p><strong>Näide `null` kontrollist:</strong></p>
+        <pre>
+if (newbitcoinrate?.Bpi?.EUR == null) {
+    MessageBox.Show("EUR andmed pole saadaval.", "Viga");
+    return;
+}
+        </pre>
+
+        <h3>5.`try-catch`</span></h3>
+        <p>`try-catch` plokki kasutatakse vigade käsitlemiseks. Kui koodis tekib viga, saab selle osas käsitleda.</p>
+        <p>See on oluline, et vältida programmi kokkujooksmist ootamatute vigade korral.</p>
+        <p><strong>Näide API vigade käsitlemisest:</strong></p>
+        <pre>
+try {
+    var webResponse = request.GetResponse();
+    // Teeme midagi vastusega
+} catch (Exception ex) {
+    MessageBox.Show($"API päring ebaõnnestus: {ex.Message}", "Viga");
+}
+        </pre>
+
+        <h3>6.JSON ja deserialiseerimine</span></h3>
+        <p>JSON on andmevahetusvorming, mida kasutatakse API-de andmete edastamiseks. Deserialiseerimine tähendab JSON andmete teisendamist objektideks, mida saab koodis kasutada.</p>
+        <p><strong>Näide JSON andmete deserialiseerimisest:</strong></p>
+        <pre>
+using Newtonsoft.Json;
+
+var rates = responseReader.ReadToEnd();
+var bitcoinRates = JsonConvert.DeserializeObject<BitcoinRates>(rates);
+        </pre>
+    </div>
+</body>
+</html>
