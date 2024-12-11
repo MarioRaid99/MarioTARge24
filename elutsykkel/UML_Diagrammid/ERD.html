@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UML Diagrammid</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* navbar asjad */
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* pea lehe kontent */
+        .container {
+            display: flex;
+            margin: 20px;
+        }
+
+        /* teksti sektsioon */
+        .text-section {
+            flex: 2;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+        }
+
+        /* pildi stuff */
+        .image-section {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        
+        .button-link {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 10px auto;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button-link:hover {
+            background-color: #333;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="/index.html">Pealeht</a>
+        <a href="/elutsykkel/UML_Diagrammid/UML_Indeks.html"> UML Pealeht</a>
+        <a href="/elutsykkel/UML_Diagrammid/Flowchart.html">Flowchart</a>
+        <a href="/elutsykkel/casevahendid/main.html">Casevahendid</a>
+    </div>
+
+    <!-- põhi stuff -->
+    <div class="container">
+        <!-- teksti sektsioon -->
+        <div class="text-section">
+            <h2>Mis on ERD?</h2>
+            <p>Entity Relationship Diagram (ERD)</strong> ehk entiteedi-seose diagramm on graafiline esitusviis, 
+                mida kasutatakse andmebaasi struktuuri visualiseerimiseks. 
+                ERD näitab entiteetide vahelisi seoseid ja annab ülevaate, kuidas andmed on organiseeritud ja omavahel seotud.
+            </p>
+            <h2>Kus kasutatakse ERD-d?</h2>
+            <p>ERD-d kasutatakse peamiselt:</p>
+            <ul>
+                <li>Andmebaaside disainimisel ja analüüsimisel.</li>
+                <li>Infosüsteemide arendamisel ja dokumenteerimisel.</li>
+                <li>Protsesside visualiseerimiseks ja mõistmiseks.</li>
+                <li>Kõrg- ja madaltaseme arhitektuuri loomisel.</li>
+            </ul>
+        </br>
+        <h2>Ühenduselemendid ERD-s</h2>
+        <p>ERD kasutab visuaalseid elemente nagu entiteedid, atribuudid ja seosed, mis on kujutatud erinevate kujunditega:</p>
+        <ul>
+            <li><strong>Entiteedid:</strong> Andmed, mida hoitakse (nt tabelid andmebaasis). Tavaliselt kujutatud ristkülikutena.</li>
+            <li><strong>Atribuudid:</strong> Entiteetide omadused või andmed (nt veerud tabelis). Kujutatud ovaalidega.</li>
+            <li><strong>Seosed:</strong> Näitavad, kuidas entiteedid on omavahel seotud. Kujutatud rombidega.</li>
+        </ul>
+        </br>
+        <h2>Ühenduselemendid ERD-s</h2>
+        <p>ERD kasutab visuaalseid elemente nagu entiteedid, atribuudid ja seosed, mis on kujutatud erinevate kujunditega:</p>
+        <ul>
+            <li><strong>Entiteedid:</strong> Andmed, mida hoitakse (nt tabelid andmebaasis). Tavaliselt kujutatud ristkülikutena.</li>
+            <li><strong>Atribuudid:</strong> Entiteetide omadused või andmed (nt veerud tabelis). Kujutatud ovaalidega.</li>
+            <li><strong>Seosed:</strong> Näitavad, kuidas entiteedid on omavahel seotud. Kujutatud rombidega.</li>
+        </ul>
+        </br>
+        <h2>Võtmete tüübid</h2>
+        <ul>
+            <li><strong>Primary Key (PK):</strong> Ainulaadne tunnus, mis identifitseerib igat rida tabelis (nt kliendi ID).</li>
+            <li><strong>Foreign Key (FK):</strong> Väli, mis viitab teise tabeli Primary Key-le, et luua seos (nt tellimuse kliendi ID).</li>
+            <li><strong>Composite Key:</strong> Kombinatsioon mitmest väljast, mis koos moodustavad unikaalse identifikaatori (nt eesnimi ja sünnikuupäev).</li>
+            <li><strong>Key:</strong> Üldine termin, mis viitab väljadele, mida kasutatakse tabeli identifitseerimiseks ja seoste loomiseks.</li>
+        </ul>
+        </br>
+        
+            <h2>Kasulikud lingid</h2>
+        <a href="https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model" class="button-link">Wikipedia</a>
+
+        
+        </div>
+        <!-- pildi sektsion -->
+        <div class="image-section">
+            <h2>ERD diagramm </h2>
+            <p></p>
+            <p>ERD Diagrammi näide:</p>
+            <img src="ERD.jpg" alt="ERD diagram">
+        </div>
+
+    </div>
+
+</body>
+</html>
