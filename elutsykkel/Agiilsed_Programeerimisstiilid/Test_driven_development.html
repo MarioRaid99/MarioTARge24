@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test-driven Development</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #f4f4f9; 
+        }
+        header, footer { 
+            background: #333; 
+            color: #fff; 
+            text-align: center; 
+            padding: 10px 20px; 
+        }
+        .container { 
+            max-width: 900px; 
+            margin: auto; 
+            padding: 20px; 
+        }
+        img { 
+            max-width: 100%; 
+            height: auto; 
+        }
+        .button-link {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 10px auto;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button-link:hover {
+            background-color: #333;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Test-driven Development</h1>
+    </header>
+    <div class="container">
+        <h2>Kirjeldus</h2>
+        <p>Test-driven Development (TDD) põhineb testide kirjutamisel enne koodi arendamist.</p>
+
+        <h2>Arendustsükkel</h2>
+        <img src="images/test-driven-cycle.png" alt="Test-driven Development Arendustsükkel">
+        <p>Ülal on näide tsüklist, mis hõlmab testipõhiseid arendusprotsesse.</p>
+
+        <h2>Head ja vead</h2>
+        <ul>
+            <li><b>Head:</b> Koodi parem kvaliteet, vähem vigu hilisemas etapis.</li>
+            <li><b>Vead:</b> Võib võtta rohkem aega algstaadiumis.</li>
+        </ul>
+
+        <h2>Case-vahend</h2>
+        <p><b>JUnit:</b> Populaarne raamistik Java testide jaoks.</p>
+
+        <h2>Viited</h2>
+        <ul>
+            <li><a href="https://en.wikipedia.org/wiki/Test-driven_development" target="_blank">Test-driven Development tutvustus</a></li>
+            <li><a href="https://wazobia.tech/blog/development/8-best-test-driven-development-tdd-tools" target="_blank">Tööriistad</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <a href="../Agiilsed_Programeerimisstiilid/Agiilsed_index.html" class="button-link" >Pealehele</a>
+    <footer>
+        <p>&copy; Mario Raid / 2025 Agiilsed Programmeerimisstiilid</p>
+    </footer>
+</body>
+</html>

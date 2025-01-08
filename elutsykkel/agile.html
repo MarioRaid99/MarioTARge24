@@ -1,72 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
- <head>
-
+<html lang="et">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spiralmodel</title>
+    <title>Agile arendusmudel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            background: #555;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 5px 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            display: block;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #fff;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background: #333;
+            color: #fff;
+        }
+        td:nth-child(odd) {
+            background: #f9f9f9;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-<style>
-    table, th, td {
-      border: 1px solid black;
-      border-radius: 10px;
-    }
-</style>
-<body style="background-color:powderblue;">
-
+<body>
+    <header>
         <h1>Agile arendusmudel</h1>
-    </br>
-        <p>Agiilne tarkvaraarendus on katustermin tarkvara arendamise lähenemisviisidele, mis kajastavad väärtusi ja põhimõtteid, 
-            milles 2001. aastal kokku leppis 17 tarkvaraarendajast koosnev rühm The Agile Alliance.
+        <nav>
+            <a href="../index.html" style="color: #fff;">Tagasi pealehele</a>
+            <a href="../elutsykkel/Agiilsed_Programeerimisstiilid/Agiilsed_index.html" style="color: #fff;">Loe rohkem siit</a>
+        </nav>
+    </header>
+    <div class="container">
+        <p>
+            Agiilne tarkvaraarendus on katustermin tarkvara arendamise lähenemisviisidele, 
+            mis kajastavad väärtusi ja põhimõtteid, milles 2001. aastal kokku leppis 17 tarkvaraarendajast koosnev rühm The Agile Alliance.
         </p>
-    </br>
--------------------------------------------------
         <h3>Nagu on dokumenteeritud nende tarkvaraarenduse manifestis, hindavad praktikud järgmist:</h3>
-        <li>Isikud ja vastasmõju protsesside ja tööriistade üle</li>
-        <li>Töötarkvara üle põhjaliku dokumentatsiooni</li>
-        <li>Kliendikoostöö lepingu läbirääkimistel</li>
-        <li>Reageerimine muutustele on olulisem kui plaani järgimine.</li>
-    </br>
--------------------------------------------------
-         <p>Praktikud viitavad inspiratsioonile tol ajal uutest praktikatest, sealhulgas ekstreemprogrammeerimine, scrum, 
-        dünaamiliste süsteemide arendusmeetod, adaptiivne tarkvaraarendus ning vajadusele alternatiivi järele 
-        dokumentatsioonikesksetele ja raskepärastele tarkvaraarendusprotsessidele.
+        <ul>
+            <li>Isikud ja vastasmõju protsesside ja tööriistade üle</li>
+            <li>Töötarkvara üle põhjaliku dokumentatsiooni</li>
+            <li>Kliendikoostöö lepingu läbirääkimistel</li>
+            <li>Reageerimine muutustele on olulisem kui plaani järgimine.</li>
+        </ul>
+        <p>
+            Praktikud viitavad inspiratsioonile tol ajal uutest praktikatest, sealhulgas ekstreemprogrammeerimine, 
+            scrum, dünaamiliste süsteemide arendusmeetod, adaptiivne tarkvaraarendus ning vajadusele alternatiivi järele 
+            dokumentatsioonikesksetele ja raskepärastele tarkvaraarendusprotsessidele.
         </p>
-        <p>Paljud tarkvaraarenduse praktikad on välja kasvanud agiilse mõtteviisi põhjal. 
-            Need agiilil põhinevad praktikad, mida mõnikord nimetatakse Agiiliks (suure algustähega), hõlmavad nõuete täpsustamist, 
-            lahenduste avastamist ja täiustamist iseseisvalt organiseeruvate ning ristfunktsionaalsete meeskondade koostöös oma klientide või lõppkasutajatega.
+        <p>
+            Agiilne arendus keskendub peamiselt tarkvaraarenduse protsessi kiirele ja paindlikule lähenemisele, 
+            et tagada kiirendatud tarkvaraarendus tsüklid ning tarkvaratoodete kvaliteet ja väärtus kliendile.
         </p>
-    </br>
-        <p>Agiilne arendus keskendub peamiselt tarkvaraarenduse protsessi kiirele ja paindlikule lähenemisele, 
-            et tagada kiirendatud tarkvaraarendus tsüklid ning tarkvaratoodete kvaliteet ja väärtus kliendile. 
-            Selle saavutamiseks on agiilse arenduse metoodikal mitmeid põhimõtteid ja filosoofiaid, mis juhendavad tarkvaraarendajaid kogu 
-            arendusprotsessi vältel.
-        </p>
--------------------------------------------------
-    </br>
         <img src="Agile.jpg" alt="Pilt Agile mudelist">
-    </br>
--------------------------------------------------
-        <h2>Agiilne vs Traditsioonilised SDLC mudelid</h2> 
-            <p>Agiil põhineb <b>adaptiivsetel tarkvaraarendusmeetoditel</b>, samas kui traditsioonilised SDLC mudelid, nagu näiteks kosemudel, 
-                lähtuvad ennustavast lähenemisviisist. Ennustava lähenemisviisi puhul teevad meeskonnad traditsioonilistes SDLC mudelites 
-                üksikasjaliku planeerimise ja neil on täielik ülevaade ülesannetest ja funktsioonidest, mis tuleb täita järgmiste kuude jooksul või toote 
-                elutsükli jooksul.</p> 
-            <p>Ennustavad meetodid tuginevad täielikult <b>nõuete analüüsile ja planeerimisele</b>, mis tehakse tsükli alguses. 
-                Kõik muudatused läbivad range muudatuste juhtimise ja prioriteerimise protsessi.</p> 
-            <p>Agiil kasutab <b>adaptiivset lähenemist</b>, kus puudub üksikasjalik planeerimine ning tulevaste ülesannete selgus 
-                piirdub arendatavate funktsioonidega. Funktsioonipõhine arendus ja meeskonna dünaamiline kohandumine muutuva tootenõudlusega 
-                on selle põhielemendid. Toodet testitakse sageli, iga iteratsiooni jooksul, mis vähendab suuremate vigade riski tulevikus.</p> 
-            <p><b>Kliendi kaasamine</b> on selle agiilse metoodika alustala ning avatud suhtlus koos minimaalse dokumentatsiooniga on 
-                tüüpilised agiilse arenduskeskkonna tunnused. Agiilsed meeskonnad töötavad tihedas koostöös ja asuvad enamasti samas geograafilises asukohas.
-            </p> 
--------------------------------------------------
-        <h2>Agiilne mudel - plussid ja miinused</h2> 
-            <p>Agiilseid meetodeid on tarkvaramaailmas viimasel ajal laialdaselt aktsepteeritud. 
-                Kuid see meetod ei pruugi alati sobida kõigile toodetele. Siin on mõned agiilse mudeli plussid ja miinused:
-            </p>
-
-        <table style="width:50%">
+        <h2>Agiilne vs Traditsioonilised SDLC mudelid</h2>
+        <p>
+            Agiil põhineb <b>adaptiivsetel tarkvaraarendusmeetoditel</b>, samas kui traditsioonilised SDLC mudelid, 
+            nagu näiteks kosemudel, lähtuvad ennustavast lähenemisviisist.
+        </p>
+        <h2>Agiilne mudel - plussid ja miinused</h2>
+        <table>
             <tr>
                 <th>Head</th>
                 <th>Vead</th>
@@ -91,40 +133,15 @@
                 <td>Sobib nii fikseeritud kui ka muutuvate nõuetega projektidele.</td>
                 <td>Sõltub tugevalt kliendi kaasamisest; ebaselgete kliendi nõuete korral võib meeskond vales suunas liikuda.</td>
             </tr>
-            <tr>
-                <td>Annab varakult osalisi töötavaid lahendusi.</td>
-                <td>Väga suur sõltuvus üksikisikutest, kuna dokumentatsiooni on minimaalselt.</td>
-            </tr>
-            <tr>
-                <td>Hea mudel keskkondadele, mis pidevalt muutuvad.</td>
-                <td>Tehnoloogia üleandmine uutele meeskonnaliikmetele võib olla keeruline dokumentatsiooni puudumise tõttu.</td>
-            </tr>
-            <tr>
-                <td>Minimaalsed reeglid ja lihtsasti kasutatav dokumentatsioon.</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Võimaldab samaaegset arendust ja tarnimist üldise plaani raames.</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Vähe või üldse mitte planeerimist vaja.</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Lihtne hallata.</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Annab arendajatele paindlikkuse.</td>
-                <td></td>
-            </tr>
-            
         </table>
-
-
-    <td colspan="4"> <a href="https://et.wikipedia.org/wiki/Agiilne_arendus">Kasutatud Materjal</a></td>
-    <td colspan="4"> <a href="https://www.tutorialspoint.com/sdlc/sdlc_agile_model.htm">Kasutatud Materjal 2</a></td>
-
+        <h2>Viited</h2>
+        <ul>
+            <li><a href="https://et.wikipedia.org/wiki/Agiilne_arendus">Kasutatud Materjal</a></li>
+            <li><a href="https://www.tutorialspoint.com/sdlc/sdlc_agile_model.htm">Kasutatud Materjal 2</a></li>
+        </ul>
+    </div>
+    <footer>
+        <p>&copy; 2025 Agiilsed Programmeerimisstiilid</p>
+    </footer>
 </body>
 </html>
